@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>$SAYLOR — Transparency &amp; On-Chain Proof</title>
+<meta name="description" content="$SAYLOR transparency report — every lock, LP, and authority, verifiable on-chain. ~60% of supply timelocked. Parody memecoin, not affiliated with Michael Saylor or MicroStrategy." />
+<link rel="icon" type="image/svg+xml" href="assets/cope-king.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Space+Mono:wght@400;700&family=Anton&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#343434;--paper:#f4f2ea;--ink:#161616;--gold:#f2c53d;--orange:#ff7a1a;--green:#37b24d;--muted:#9a9a9a;--red:#c0202f;}
+  *{box-sizing:border-box}
+  body{margin:0;color:var(--paper);font-family:'Special Elite','Courier New',monospace;
+    background:radial-gradient(1000px 500px at 50% -150px,#3d3d3d,transparent 70%),var(--bg);min-height:100vh}
+  a{color:var(--gold)}
+  .wrap{max-width:900px;margin:0 auto;padding:32px 18px 60px}
+  .top{display:flex;align-items:center;gap:14px;flex-wrap:wrap;border-bottom:2px solid #000;padding-bottom:16px}
+  .top img{width:52px;height:52px;border-radius:10px;border:2px solid var(--gold);background:#fff}
+  h1{font-family:'Anton',sans-serif;letter-spacing:2px;font-size:clamp(26px,6vw,42px);margin:0;text-shadow:2px 2px 0 #000}
+  .sub{color:#cfcfcf;font-size:14px;margin-top:4px}
+  .back{margin-left:auto;font-family:'Space Mono',monospace;font-size:13px}
+  .headline{background:#1d1d1d;border:2px solid #000;box-shadow:5px 5px 0 var(--gold);padding:18px 20px;margin:24px 0;
+    font-family:'Space Mono',monospace}
+  .headline b{color:var(--gold)}
+  .ca{display:flex;background:var(--paper);border:2px solid #000;box-shadow:4px 4px 0 #000;margin:18px 0}
+  .ca code{flex:1;padding:12px;font-family:'Space Mono',monospace;font-size:12px;color:#111;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  h2{font-family:'Anton',sans-serif;letter-spacing:1px;font-size:24px;margin:34px 0 12px;text-shadow:2px 2px 0 #000}
+  table{width:100%;border-collapse:collapse;font-family:'Space Mono',monospace;font-size:13px;color:#111}
+  th,td{border:2px solid #000;padding:9px 11px;text-align:left;background:var(--paper);vertical-align:top}
+  th{background:var(--gold)}
+  td .amt{font-weight:700}
+  .status-ok{color:var(--green);font-weight:700}
+  .note{font-family:'Space Mono',monospace;font-size:11px;color:#9a9a9a;margin-top:10px;line-height:1.7}
+  .disc{margin-top:34px;background:#0d0d0d;border:2px solid #000;padding:16px;font-family:'Space Mono',monospace;font-size:11px;line-height:1.7;color:#cfcfcf}
+  .pill{display:inline-block;background:#1d1d1d;border:2px solid #000;padding:3px 10px;font-family:'Space Mono',monospace;font-size:12px;margin:2px 4px 2px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <img src="assets/cope-king.svg" alt="$SAYLOR">
+    <div>
+      <h1>$SAYLOR — TRANSPARENCY</h1>
+      <div class="sub">Every claim, verifiable on-chain. Don't trust — click through.</div>
+    </div>
+    <a class="back" href="https://gaysaylor.com">← gaysaylor.com</a>
+  </div>
+
+  <div class="headline">
+    <b>~60% of total supply is timelocked on-chain.</b> Mint &amp; freeze authorities are revoked (nobody can print more or freeze wallets). Liquidity is founder-seeded on Meteora. The founder holds ~25% (15% treasury + 10% liquid, disclosed) and ~12% is genuine community float held by other wallets. Total supply: 1,000,000,000 $SAYLOR (Token-2022).
+  </div>
+
+  <div class="ca">
+    <code id="ca">BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump</code>
+    <button style="background:var(--orange);color:#fff;border:0;border-left:2px solid #000;font-weight:700;padding:0 16px;cursor:pointer;font-family:'Space Mono',monospace" onclick="navigator.clipboard.writeText('BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump');this.textContent='COPIED'">COPY</button>
+  </div>
+
+  <h2>🔒 Locks &amp; Authorities</h2>
+  <table>
+    <tr><th>What</th><th>Amount</th><th>Terms</th><th>Verify</th></tr>
+    <tr>
+      <td>Supply timelock #1</td>
+      <td class="amt">~275.4M</td>
+      <td>public timelock (StakePoint, PDA)</td>
+      <td><a href="https://stakepoint.app/locks/cmra0kdp00000l204xsw73ldn" target="_blank" rel="noopener">lock page</a> · <a href="https://solscan.io/tx/cbkN2AaXy9EDorNHfyyNwGLgsfJqrLiDAsb6YH2xr7dRuETDNtfX7K8r7kmxT9cYbNggzpLLne6SRvdnnfLNaG9" target="_blank" rel="noopener">tx</a></td>
+    </tr>
+    <tr>
+      <td>Supply timelock #2</td>
+      <td class="amt">~270.5M</td>
+      <td>public timelock (StakePoint, PDA)</td>
+      <td><a href="https://stakepoint.app/locks/cmra3f2ze0000lb04ks2qxxmi" target="_blank" rel="noopener">lock page</a> · <a href="https://solscan.io/tx/2eoNuYF1VhhJ1EpFLyaqvsRsVdiF7fvGh7hph5bh9tfLR2BWHjGQijGM44ack4Xa6KfbgRvVwDoy1eU3QmsPgrgM" target="_blank" rel="noopener">tx</a></td>
+    </tr>
+    <tr>
+      <td>Founder lock</td>
+      <td class="amt">~49M</td>
+      <td>6-month lock (StakePoint, PDA)</td>
+      <td><a href="https://stakepoint.app/locks/cmra17kgs0000l404jc7qy3lb" target="_blank" rel="noopener">lock page</a> · <a href="https://solscan.io/tx/agvJGPkoDfu13M6maWECD55GT1ymEd4seY62WbPnq9cKPsQzaPYKKtH3wj8EqGGj9zsEnxrUdJtMnELG7Cb8157" target="_blank" rel="noopener">tx</a></td>
+    </tr>
+    <tr>
+      <td>Mint authority</td>
+      <td class="status-ok">REVOKED ✅</td>
+      <td>no more can ever be minted</td>
+      <td><a href="https://solscan.io/token/BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump" target="_blank" rel="noopener">token page</a></td>
+    </tr>
+    <tr>
+      <td>Freeze authority</td>
+      <td class="status-ok">REVOKED ✅</td>
+      <td>no wallet can be frozen</td>
+      <td><a href="https://solscan.io/token/BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump" target="_blank" rel="noopener">token page</a></td>
+    </tr>
+  </table>
+  <p class="note">Locks are held in on-chain Program Derived Addresses (PDAs) — no private key can withdraw them before the unlock date. Amounts are net of StakePoint's 2% lock fee.</p>
+
+  <h2>🌊 Liquidity</h2>
+  <table>
+    <tr><th>What</th><th>Details</th><th>Verify</th></tr>
+    <tr>
+      <td>Meteora DAMM v2 pool</td>
+      <td>$SAYLOR / SOL · founder-seeded · 4% swap fee<br><span class="note">Fees split 25% treasury / 75% founder. Perma-lock optional/pending.</span></td>
+      <td><a href="https://app.meteora.ag/dammv2/BC62nm1MLrgQghUA6uuX2L5uHNxY5aZt5U69E1CErvAs" target="_blank" rel="noopener">pool</a> · <a href="https://solscan.io/account/BC62nm1MLrgQghUA6uuX2L5uHNxY5aZt5U69E1CErvAs" target="_blank" rel="noopener">solscan</a></td>
+    </tr>
+  </table>
+
+  <h2>📊 Distribution</h2>
+  <table>
+    <tr><th>Bucket</th><th>%</th><th>Verify</th></tr>
+    <tr><td>🔒 Timelocked supply</td><td class="amt">~55%</td><td>see locks above</td></tr>
+    <tr><td>⏳ Founder lock (6-mo)</td><td class="amt">~5%</td><td>see locks above</td></tr>
+    <tr><td>🌊 LP (founder-provided)</td><td class="amt">~3%</td><td>see liquidity above</td></tr>
+    <tr><td>🏛️ Treasury (founder-controlled)</td><td class="amt">~15%</td><td><a href="https://solscan.io/account/5LQVwpFdhvfoS85MjduzPTqwtTda5arpXzsKmQxSLS5j" target="_blank" rel="noopener">wallet</a></td></tr>
+    <tr><td>🔓 Founder liquid (disclosed)</td><td class="amt">~10%</td><td><a href="https://solscan.io/account/5LQVwpFdhvfoS85MjduzPTqwtTda5arpXzsKmQxSLS5j" target="_blank" rel="noopener">wallet</a></td></tr>
+    <tr><td>🐂 Community float (other wallets)</td><td class="amt">~12%</td><td><a href="https://solscan.io/token/BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump#holders" target="_blank" rel="noopener">holders</a></td></tr>
+  </table>
+
+  <h2>🔗 More</h2>
+  <div>
+    <a class="pill" href="https://gaysaylor.com" target="_blank" rel="noopener">🌐 gaysaylor.com</a>
+    <a class="pill" href="https://x.com/gaysaylorsol" target="_blank" rel="noopener">🐦 @gaysaylorsol</a>
+    <a class="pill" href="https://t.me/gaysaylorsol" target="_blank" rel="noopener">✈️ Telegram</a>
+    <a class="pill" href="https://github.com/GaySaylor/saylor" target="_blank" rel="noopener">🧑‍💻 GitHub (open code)</a>
+    <a class="pill" href="https://dexscreener.com/solana/BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump" target="_blank" rel="noopener">📈 DEX Screener</a>
+  </div>
+
+  <div class="disc">
+    <b>PARODY / DISCLAIMER.</b> $SAYLOR is a community-run PARODY memecoin for entertainment and satire. It is NOT affiliated with, endorsed by, or connected to Michael Saylor, Strategy Inc. / MicroStrategy, or MSTR in any way. All names and likenesses are used for parody and commentary. $SAYLOR is NOT an investment, security, or financial product, carries no expectation of profit, and confers no claim on any entity. A majority of supply is timelocked with public unlock dates; the founder still holds ~25% (treasury + liquid), disclosed openly above. Memecoins are extremely high risk — you can lose everything. Nothing here is financial advice. Do your own research; verify every link above yourself.
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+name = "round-lake-f28a"
+compatibility_date = "2026-07-11"
+
+# Static site — serves the contents of _site/ (index.html, assets, transparency.html, token-logo.png)
+[assets]
+directory = "./_site"

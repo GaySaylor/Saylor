@@ -1,0 +1,49 @@
+# ============================================================
+# PUBLIC WEBSITE REPO — only _site/ + wrangler.toml + README are published.
+# Everything below is kept OUT of the public repo (runs locally / on the box).
+# ============================================================
+
+# secrets — never commit
+*config.json
+config.json
+.env
+*.env
+*.pem
+*.key
+*keypair*
+*wallet*
+*-state.json
+
+# infra / bots / contract — NOT part of the public website
+discord-setup/
+news-feed/
+price-ticker/
+verify-bot/
+burn-engine/
+community-bots/
+saylor-tg-bot/
+saylor-watch/
+server.py
+TOKENOMICS.md
+/assets/kings/
+
+# root source (the served copy lives in _site/) — anchored so _site/ is NOT ignored
+/index.html
+/assets/
+
+# internal marketing + strategy
+X-LAUNCH.md
+X-THREAD-saylorcycle.md
+X-SHITPOSTS.md
+CONTENT-CALENDAR.md
+BRAINSTORM.md
+VIDEO_STORYBOARD.md
+STATUS.md
+
+# build / deps / logs
+.venv/
+__pycache__/
+*.pyc
+node_modules/
+.DS_Store
+*.log
