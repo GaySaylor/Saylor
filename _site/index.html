@@ -3,175 +3,205 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>$SAYLOR :: THE COPE KING | wojak parody memecoin on Solana</title>
-<meta name="description" content="$SAYLOR - wojak parody memecoin on Solana. 1B supply, ~60% locked on-chain (supply timelock + founder lock), plus founder-provided Meteora liquidity, 10% liquid founder bag disclosed, burns on every red MSTR day and every confirmed BTC sale. A deep parody of the SaylorCycle era. Not affiliated with Michael Saylor or MicroStrategy." />
-<link rel="icon" type="image/svg+xml" href="assets/cope-king.svg">
+<title>$SAYLOR — THE COPE KING | parody memecoin on Solana</title>
+<meta name="description" content="$SAYLOR — The Cope King. A parody memecoin on Solana with receipts: 1B supply, ~60% locked on-chain (verifiable), disclosed founder bag, and a burn engine pointed at every red MSTR day and confirmed BTC sale. Not affiliated with Michael Saylor or MicroStrategy." />
+<link rel="canonical" href="https://gaysaylor.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gaysaylor.com/">
+<meta property="og:title" content="FLY PRIVATE. COPE PUBLIC. — $SAYLOR, The Cope King">
+<meta property="og:description" content="A parody with a flight manifest: locks, burns, and a disclosed founder bag. ~60% locked on-chain, verifiable. He types, we burn.">
+<meta property="og:image" content="https://gaysaylor.com/assets/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@gaysaylorsol">
+<meta name="twitter:image" content="https://gaysaylor.com/assets/og-card.jpg">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Space+Mono:wght@400;700&family=Anton&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Anton&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#343434; --bg2:#2b2b2b; --paper:#f4f2ea; --ink:#161616;
-    --gold:#f2c53d; --gold-d:#c99a1e; --orange:#ff7a1a; --blue:#2b48c9; --red:#c0202f;
-    --green:#37b24d; --muted:#9a9a9a;
+    --bg:#2a211a; --bg2:#221a14; --paper:#f4f2ea; --ink:#161616;
+    --gold:#f2c53d; --gold-d:#c99a1e; --orange:#ff7a1a; --red:#c0202f;
+    --green:#37b24d; --muted:#b3a89a;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{
     margin:0;color:var(--paper);
-    font-family:'Special Elite','Courier New',monospace;
-    background:
-      radial-gradient(1000px 500px at 50% -150px, #3d3d3d, transparent 70%),
-      var(--bg);
-    background-attachment:fixed;overflow-x:hidden;
+    font-family:'Space Mono','Courier New',monospace;font-size:14px;line-height:1.55;
+    background:radial-gradient(1000px 500px at 50% -150px, #38291d, transparent 70%), var(--bg);
+    overflow-x:hidden;
   }
   body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.05;
     background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2"/></filter><rect width="100%25" height="100%25" filter="url(%23n)"/></svg>')}
-  .wrap{max-width:940px;margin:0 auto;padding:0 16px;position:relative;z-index:2}
+  .wrap{max-width:960px;margin:0 auto;padding:0 16px;position:relative;z-index:2}
   a{color:var(--gold)}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
   img,svg{max-width:100%}
 
-  .marq{background:#111;color:var(--gold);border-top:2px solid #000;border-bottom:2px solid #000;
-    font-family:'Space Mono',monospace;font-weight:700;font-size:14px;padding:7px 0;white-space:nowrap;overflow:hidden;
-    position:sticky;top:0;z-index:40}
-  .marq span{display:inline-block;padding-left:100%;animation:tick 24s linear infinite}
+  .marq{background:#171310;color:var(--gold);border-top:2px solid #000;border-bottom:2px solid #000;
+    font-weight:700;font-size:14px;padding:7px 0;white-space:nowrap;overflow:hidden}
+  .marq span{display:inline-block;padding-left:100%;animation:tick 18s linear infinite}
   @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+  @media (prefers-reduced-motion: reduce){.marq span{animation:none;padding-left:0}}
 
-  nav{background:#1d1d1d;border-bottom:2px solid #000;position:relative;z-index:39}
-  nav .wrap{display:flex;align-items:center;gap:14px;height:58px;flex-wrap:wrap}
-  .brand{font-family:'Anton',sans-serif;letter-spacing:2px;font-size:26px;color:var(--paper)}
+  nav{background:#1c1611;border-bottom:2px solid #000;position:sticky;top:0;z-index:40}
+  nav .wrap{display:flex;align-items:center;gap:14px;height:56px}
+  .brand{font-family:'Anton',sans-serif;letter-spacing:2px;font-size:24px;color:var(--paper);display:flex;align-items:center;gap:9px;text-decoration:none}
+  .brand img{width:30px;height:30px}
   .brand b{color:var(--gold)}
-  nav .links{margin-left:auto;display:flex;gap:16px;font-family:'Space Mono',monospace;font-size:13px}
+  nav .links{margin-left:auto;display:flex;gap:16px;font-size:13px}
   nav .links a{color:var(--muted);text-decoration:none}
   nav .links a:hover{color:var(--paper)}
   .cta{background:var(--gold);color:#1a1400;border:2px solid #000;box-shadow:3px 3px 0 #000;
-    font-family:'Space Mono',monospace;font-weight:700;padding:8px 16px;text-decoration:none;font-size:13px;
+    font-weight:700;padding:8px 16px;text-decoration:none;font-size:13px;
     display:inline-block;transition:transform .1s}
   .cta:hover{transform:translate(2px,2px);box-shadow:1px 1px 0 #000}
-  @media(max-width:720px){nav .links{display:none}}
+  @media(max-width:720px){nav .links{display:none}nav .cta{margin-left:auto}}
 
-  header{padding:44px 0 20px;text-align:center}
-  .badge{display:inline-block;background:var(--red);color:#fff;font-family:'Space Mono',monospace;font-weight:700;
+  header{padding:46px 0 26px}
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}
+  @media(max-width:820px){.hero{grid-template-columns:1fr}}
+  .badge{display:inline-block;background:var(--red);color:#fff;font-weight:700;
     font-size:11px;padding:4px 12px;border:2px solid #000;transform:rotate(-2deg)}
-  h1{font-family:'Anton',sans-serif;font-size:clamp(52px,12vw,120px);line-height:.86;margin:16px 0 4px;
+  h1{font-family:'Anton',sans-serif;font-size:clamp(44px,8.5vw,84px);line-height:.92;margin:16px 0 8px;
     letter-spacing:2px;color:var(--paper);text-shadow:4px 4px 0 #000}
   h1 .k{color:var(--gold)}
-  .sub1{font-family:'Anton',sans-serif;letter-spacing:3px;font-size:clamp(18px,4vw,30px);color:var(--orange)}
-  .pill{font-family:'Space Mono',monospace;font-size:13px;background:#1d1d1d;border:2px solid #000;
-    display:inline-block;padding:4px 12px;margin-top:12px}
+  .sub1{font-size:15px;color:#e6ddcf;max-width:460px}
+  .pill{font-size:12.5px;background:#1c1611;border:2px solid #000;display:inline-block;padding:4px 12px;margin-top:14px;color:var(--muted)}
+  .heroart{border:4px solid #000;box-shadow:10px 10px 0 var(--gold);transform:rotate(-1deg);background:#000}
+  .heroart img{display:block;width:100%}
+  .heroart figcaption{font-size:10.5px;color:#0e0a06;background:var(--gold);border-top:3px solid #000;padding:5px 10px;font-weight:700}
+  @media(max-width:820px){.heroart{margin-top:22px;transform:none}}
 
-  .shrine{max-width:340px;margin:26px auto 0}
-  .shrine img{display:block;width:100%;border-radius:16px;border:4px solid var(--gold);background:#fff;box-shadow:8px 8px 0 rgba(0,0,0,.45)}
-  .bob{animation:bob 3s ease-in-out infinite;transform-origin:center}
-  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-  .glow{animation:glow 2.4s ease-in-out infinite}
-  @keyframes glow{0%,100%{opacity:.5}50%{opacity:1}}
-  .tear{fill:#4fb0ff;stroke:#1f78d0;stroke-width:1.5;transform-box:fill-box;transform-origin:center top;animation:cry 1.7s ease-in infinite}
-  @keyframes cry{0%{opacity:0;transform:translateY(-2px) scale(.5)}15%{opacity:1;transform:translateY(2px) scale(1)}85%{opacity:1}100%{opacity:0;transform:translateY(66px) scale(1.05)}}
-
-  .ca{margin:24px auto 0;max-width:620px;display:flex;background:var(--paper);border:2px solid #000;box-shadow:4px 4px 0 #000}
-  .ca code{flex:1;padding:12px;font-family:'Space Mono',monospace;font-size:12px;color:#111;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .ca{margin:20px 0 0;max-width:620px;display:flex;background:var(--paper);border:2px solid #000;box-shadow:4px 4px 0 #000}
+  .ca code{flex:1;padding:12px;font-size:12px;color:#111;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .ca button{background:var(--orange);color:#fff;border:0;border-left:2px solid #000;font-weight:700;padding:0 18px;cursor:pointer;font-family:'Space Mono',monospace}
-  .btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+  .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
   .cta.buy{background:var(--green);color:#fff;font-size:16px;padding:12px 26px}
 
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);border:2px solid #000;margin-top:30px;background:var(--paper);color:#111}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);border:2px solid #000;margin-top:34px;background:var(--paper);color:#111}
   .stat{padding:14px 8px;text-align:center;border-right:2px solid #000}
   .stat:last-child{border-right:0}
-  .stat .l{font-family:'Space Mono',monospace;font-size:10px;color:#666;text-transform:uppercase}
+  .stat .l{font-size:10px;color:#666;text-transform:uppercase}
   .stat .v{font-family:'Anton',sans-serif;font-size:24px;letter-spacing:1px}
   .up{color:var(--green)} .down{color:var(--red)}
-  @media(max-width:600px){.stats{grid-template-columns:repeat(2,1fr)}.stat{border-bottom:2px solid #000}}
+  @media(max-width:600px){.stats{grid-template-columns:repeat(2,1fr)}.stat:nth-child(-n+2){border-bottom:2px solid #000}.stat:nth-child(2){border-right:0}}
 
-  section{padding:48px 0}
-  .h2{font-family:'Anton',sans-serif;font-size:clamp(30px,6vw,52px);letter-spacing:2px;text-align:center;color:var(--paper);text-shadow:3px 3px 0 #000}
-  .subt{text-align:center;max-width:600px;margin:8px auto 30px;color:#cfcfcf}
+  section{padding:56px 0}
+  .band{background:var(--bg2);border-top:2px solid #000;border-bottom:2px solid #000}
+  .h2{font-family:'Anton',sans-serif;font-size:clamp(30px,6vw,50px);letter-spacing:2px;text-align:center;color:var(--paper);text-shadow:3px 3px 0 #000;margin:0 0 6px}
+  .subt{text-align:center;max-width:620px;margin:8px auto 30px;color:#d8cfc0}
   .card{background:var(--paper);color:#161616;border:2px solid #000;box-shadow:6px 6px 0 #000;padding:20px}
   .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
   .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
   @media(max-width:800px){.grid3,.grid2{grid-template-columns:1fr}}
   .card b{font-family:'Anton',sans-serif;letter-spacing:1px;font-size:19px}
+  .art{border:4px solid #000;box-shadow:8px 8px 0 rgba(0,0,0,.5);background:#000}
+  .art img{display:block;width:100%}
+  .art figcaption{font-size:10.5px;color:#0e0a06;background:var(--gold);border-top:3px solid #000;padding:5px 10px;font-weight:700}
+  .midcta{text-align:center;margin-top:28px}
 
-  table{width:100%;border-collapse:collapse;font-family:'Space Mono',monospace;font-size:13px;color:#111}
+  .tblwrap{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;font-size:13px;color:#111;min-width:520px}
   th,td{border:2px solid #000;padding:8px 10px;text-align:left;background:var(--paper)}
   th{background:var(--gold)}
   .bar{height:16px;background:#ddd;border:2px solid #000}
   .bar>span{display:block;height:100%}
-  .b-lock{background:repeating-linear-gradient(45deg,var(--blue),var(--blue) 6px,#5f76e0 6px,#5f76e0 12px)}
+  .b-lock{background:repeating-linear-gradient(45deg,#2b48c9,#2b48c9 6px,#5f76e0 6px,#5f76e0 12px)}
   .b-lp{background:repeating-linear-gradient(45deg,var(--orange),var(--orange) 6px,#ffb27a 6px,#ffb27a 12px)}
   .b-float{background:repeating-linear-gradient(45deg,var(--green),var(--green) 6px,#8fe0a0 6px,#8fe0a0 12px)}
   .b-tre{background:repeating-linear-gradient(45deg,var(--gold),var(--gold) 6px,#f5dd8a 6px,#f5dd8a 12px)}
   .b-fnd{background:repeating-linear-gradient(45deg,#8a7bd8,#8a7bd8 6px,#c3b8f0 6px,#c3b8f0 12px)}
   .b-liq{background:repeating-linear-gradient(45deg,var(--red),var(--red) 6px,#f08a9a 6px,#f08a9a 12px)}
-  .row{display:flex;justify-content:space-between;font-family:'Space Mono',monospace;font-size:13px;margin:12px 0 4px;color:#161616}
+  .row{display:flex;justify-content:space-between;font-size:13px;margin:12px 0 4px;color:#161616}
 
-  .burnbox{background:#1d1d1d;border:2px solid #000;box-shadow:6px 6px 0 var(--orange);padding:24px}
-  .burnbox h3{font-family:'Anton',sans-serif;letter-spacing:1px;font-size:24px;color:var(--gold)}
-  .burnbox .mono{font-family:'Space Mono',monospace;font-size:12px;color:#bfe6c6}
+  .burnbox{background:#1c1611;border:2px solid #000;box-shadow:6px 6px 0 var(--orange);padding:24px}
+  .burnbox h3{font-family:'Anton',sans-serif;letter-spacing:1px;font-size:24px;color:var(--gold);margin:0 0 6px}
+  .burnbox .mono{font-size:12.5px;color:#cfe8d3;margin:6px 0}
+  .burnbox details{margin-top:14px;border:2px solid #3a2f24;padding:10px 14px;background:#171310}
+  .burnbox summary{cursor:pointer;font-weight:700;color:var(--gold);font-size:13px}
   .burnstat{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
-  .bx{background:#111;border:2px solid var(--gold-d);padding:12px;text-align:center}
+  .bx{background:#171310;border:2px solid var(--gold-d);padding:12px;text-align:center}
   .bx .v{font-family:'Anton',sans-serif;font-size:24px;color:var(--orange)}
-  .bx .l{font-family:'Space Mono',monospace;font-size:9px;color:#8fa;text-transform:uppercase}
+  .bx .l{font-size:9px;color:#b3d2a9;text-transform:uppercase}
   @media(max-width:600px){.burnstat{grid-template-columns:1fr}}
+  .statuschip{background:#1c1611;border:2px solid var(--gold-d);color:var(--gold);box-shadow:4px 4px 0 #000;
+    padding:12px 16px;font-size:12.5px;font-weight:700;text-align:center;margin-bottom:22px}
 
-  .greentext{max-width:600px;margin:26px auto 0;text-align:left;background:#0d0d0d;border:2px solid #000;
-    padding:16px 20px;font-family:'Space Mono',monospace;font-size:13px;color:var(--green);box-shadow:4px 4px 0 #000}
+  .greentext{max-width:600px;margin:0 auto;text-align:left;background:#12100c;border:2px solid #000;
+    padding:16px 20px;font-size:13px;color:var(--green);box-shadow:4px 4px 0 #000}
   .greentext p{margin:4px 0}
 
-  footer{border-top:2px solid #000;padding:36px 0;text-align:center;font-size:12px;background:#1d1d1d}
-  .disc{max-width:720px;margin:0 auto 18px;font-size:11px;line-height:1.7;color:#cfcfcf;text-align:left;
-    background:#0d0d0d;border:2px solid #000;padding:16px;font-family:'Space Mono',monospace}
-  .foot-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;font-family:'Space Mono',monospace;font-size:12px}
+  .ladder{max-width:640px;margin:0 auto 26px;border:2px solid #000;box-shadow:6px 6px 0 #000}
+  .tier{display:flex;align-items:center;gap:14px;padding:12px 16px;background:var(--paper);color:var(--ink);border-bottom:2px solid #000;font-size:13.5px}
+  .tier:last-child{border-bottom:0}
+  .tier .t-name{font-family:'Anton',sans-serif;letter-spacing:1px;font-size:17px;min-width:190px}
+  .tier .t-req{color:#6b6255;font-size:11.5px;margin-left:auto;text-align:right}
+  .tier.top{background:var(--gold)}
+  .tier.top .t-req{color:#4d3b00}
+
+  .chartbox{position:relative;width:100%;padding-bottom:100%}
+  @media(min-width:800px){.chartbox{padding-bottom:55%}}
+  .chartbox iframe{position:absolute;width:100%;height:100%;top:0;left:0;border:2px solid #000}
+
+  footer{border-top:2px solid #000;padding:36px 0 90px;text-align:center;font-size:12px;background:#1c1611}
+  .disc{max-width:720px;margin:0 auto 18px;font-size:11px;line-height:1.7;color:#d8cfc0;text-align:left;
+    background:#12100c;border:2px solid #000;padding:16px}
+  .foot-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;font-size:12px}
+
+  .buybar{display:none}
+  @media(max-width:720px){
+    .buybar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:50;background:#171310;border-top:2px solid #000;padding:10px 12px;gap:10px;align-items:center}
+    .buybar .cta{flex:1;text-align:center;margin:0}
+    .buybar button{background:var(--paper);color:#111;border:2px solid #000;font-weight:700;font-family:'Space Mono',monospace;padding:9px 12px;cursor:pointer;font-size:12px}
+  }
 </style>
 </head>
 <body>
 
-<div class="marq"><span>👑 THE COPE KING REIGNS &nbsp;·&nbsp; 60% LOCKED &nbsp;·&nbsp; LIQUIDITY ON METEORA &nbsp;·&nbsp; 12% IN REAL HANDS &nbsp;·&nbsp; 10% FOUNDER BAG DISCLOSED &nbsp;·&nbsp; HE TYPES, WE BURN &nbsp;·&nbsp; CYCLES ARE DEAD, SUPPLY ISN'T &nbsp;·&nbsp; EVERY RED MSTR DAY = BURN &nbsp;·&nbsp; EVERY CONFIRMED BTC SALE = BURN &nbsp;·&nbsp; DEEP PARODY, NOT FINANCIAL ADVICE &nbsp;·&nbsp; 👑 &nbsp;</span></div>
+<div class="marq"><span>👑 THE COPE KING REIGNS &nbsp;·&nbsp; ~60% LOCKED, VERIFIABLE ON-CHAIN &nbsp;·&nbsp; HE TYPES, WE BURN &nbsp;·&nbsp; DEEP PARODY, NOT FINANCIAL ADVICE &nbsp;·&nbsp; 👑 &nbsp;</span></div>
 
 <nav><div class="wrap">
-  <div class="brand">$<b>SAYLOR</b></div>
+  <a class="brand" href="#"><img src="assets/favicon.png" alt="" width="30" height="30">$<b>SAYLOR</b></a>
   <div class="links">
-    <a href="#lore">the lore</a>
-    <a href="#tokenomics">tokenomics</a>
-    <a href="#burn">burn engine</a>
-    <a href="#saylorcycle">saylorcycle</a>
-    <a href="#roadmap">roadmap</a>
-    <a href="#buy">how 2 cope</a>
+    <a href="#perks">perks</a>
+    <a href="#tokenomics">receipts</a>
+    <a href="#burn">cope engine</a>
+    <a href="#buy">how 2 buy</a>
   </div>
-  <a class="cta" href="#buy">[ BUY $SAYLOR ]</a>
+  <a class="cta" href="https://jup.ag/swap/SOL-BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump" target="_blank" rel="noopener">[ BUY $SAYLOR ]</a>
 </div></nav>
 
 <header><div class="wrap">
-  <span class="badge">DEEP PARODY · SOLANA · COMMUNITY TAKEOVER</span>
-  <h1>THE <span class="k">COPE</span><br>KING</h1>
-  <div class="sub1">$SAYLOR — he types, we burn</div>
-  <div class="pill">verified ~60% locked · authorities revoked · burns on-chain</div>
-
-  <div class="shrine">
-    <img class="bob" src="assets/cope-king.svg" alt="$SAYLOR — the Cope King: crowned Michael Saylor parody" onerror="this.style.opacity='.3';this.alt='save the image to /assets/cope-king.svg';">
-
-  </div>
-
-  <div class="greentext">
-    <p>&gt;be the most famous bitcoin bull alive</p>
-    <p>&gt;turn a software company into a leveraged BTC bet</p>
-    <p>&gt;post through every single drawdown, crown yourself king</p>
-    <p>&gt;declare the 4-year cycle dead, christen it the "SaylorCycle"</p>
-    <p>&gt;then quietly sell 3,588 coins to make the dividend</p>
-    <p>&gt;anon accumulates the abandoned $SAYLOR token</p>
-    <p>&gt;instead of dumping, LOCK/VEST 60% in public, don't even hold all of it</p>
-    <p>&gt;points a burn engine at the king's worst days</p>
-    <p>&gt;mfw the cope became a coin with a lock and a receipt</p>
-  </div>
-
-  <div class="ca">
-    <code id="ca">BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump</code>
-    <button onclick="copyCA()">COPY</button>
-  </div>
-  <div class="btns">
-    <a class="cta buy" href="#" data-link="jupiter">🪐 BUY $SAYLOR</a>
-    <a class="cta" href="#" data-link="dexscreener">📈 CHART</a>
-    <a class="cta" href="#" data-link="x">🐦 X</a>
-    <a class="cta" href="#" data-link="telegram">✈️ TG</a>
+  <div class="hero">
+    <div>
+      <span class="badge">DEEP PARODY · SOLANA · COMMUNITY TAKEOVER</span>
+      <h1>FLY PRIVATE.<br><span class="k">COPE PUBLIC.</span></h1>
+      <p class="sub1">a parody with a flight manifest: locks, burns, and a disclosed founder bag. no promises, just altitude jokes. <b>$SAYLOR — he types, we burn.</b></p>
+      <div class="pill">~60% locked · verifiable on-chain · burns are public txs</div>
+      <div class="ca">
+        <code id="ca">BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump</code>
+        <button onclick="copyCA(this)" aria-label="Copy contract address">COPY</button>
+      </div>
+      <div class="btns">
+        <a class="cta buy" href="https://jup.ag/swap/SOL-BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump" data-link="jupiter" target="_blank" rel="noopener">BUY $SAYLOR</a>
+        <a class="cta" href="https://dexscreener.com/solana/BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump" data-link="dexscreener" target="_blank" rel="noopener">CHART</a>
+        <a class="cta" href="https://x.com/gaysaylorsol" data-link="x" target="_blank" rel="noopener">X</a>
+        <a class="cta" href="https://t.me/gaysaylorsol" data-link="telegram" target="_blank" rel="noopener">TG</a>
+        <a class="cta" href="https://discord.gg/JbxnnvuCu" data-link="discord" target="_blank" rel="noopener">DISCORD</a>
+      </div>
+    </div>
+    <figure class="heroart" style="margin:0">
+      <picture>
+        <source srcset="assets/hero-jet.webp" type="image/webp">
+        <img src="assets/hero-jet.jpg" width="1034" height="1024" fetchpriority="high" alt="The Cope King flying private with Doge and Pepe — $SAYLOR parody art">
+      </picture>
+      <figcaption>cope class. wheels up, supply down. (doge &amp; pepe are cultural cameos, not partners)</figcaption>
+    </figure>
   </div>
 
   <div class="stats" id="stats">
@@ -180,113 +210,149 @@
     <div class="stat"><div class="l">liquidity</div><div class="v" id="liq">--</div></div>
     <div class="stat"><div class="l">24h</div><div class="v" id="chg">--</div></div>
   </div>
-  <div style="text-align:center;font-family:'Space Mono',monospace;font-size:11px;color:var(--muted);margin-top:8px" id="upd">syncing chart...</div>
+  <div style="text-align:center;font-size:11px;color:var(--muted);margin-top:8px" id="upd">loading live data…</div>
 </div></header>
 
-<section id="chart"><div class="wrap">
-  <h2 class="h2">LIVE CHART</h2>
-  <p class="subt">real-time price straight from dexscreener. don't trust the vibes, trust the candles.</p>
-  <style>#dexscreener-embed{position:relative;width:100%;padding-bottom:125%}@media(min-width:1400px){#dexscreener-embed{padding-bottom:65%}}#dexscreener-embed iframe{position:absolute;width:100%;height:100%;top:0;left:0;border:0;border-radius:14px}</style>
-  <div id="dexscreener-embed"><iframe src="https://dexscreener.com/solana/5YoAQPw38JfHSLJ8cmd2zJ7KSjAJbzHtPv1Kx9fJEkZv?embed=1&loadChartSettings=0&trades=0&tabs=0&info=0&chartDefaultOnMobile=1&chartLeftToolbar=0&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"></iframe></div>
-</div></section>
-
-<section id="lore"><div class="wrap">
-  <h2 class="h2">THE LORE, SERIOUSLY THOUGH</h2>
+<section id="lore" class="band"><div class="wrap">
+  <h2 class="h2">THE LORE (IT'S REAL UNDERNEATH)</h2>
   <p class="subt">under the shitposting is a real transparency mechanism. read it once, then go back to laughing.</p>
   <div class="grid3">
     <div class="card"><b>THE PREMISE</b><p style="margin-top:8px;font-size:14px">Saylor crowned himself king of leveraged bitcoin and never stops posting. $SAYLOR is the parody that burns itself every time the king bleeds. Dumb on purpose. Mechanically real anyway.</p></div>
     <div class="card"><b>~60% LOCKED</b><p style="margin-top:8px;font-size:14px">Real, on-chain: <b>55% supply timelocked</b> + <b>5% founder lock</b> (6-mo) = ~60% locked, plus <b>3% founder-provided LP</b> on Meteora. The founder holds <b>15% treasury + 10% liquid (disclosed)</b>, and <b>12% is genuine community float held by others.</b> Every lock is verifiable below.</p></div>
     <div class="card"><b>A JOKE WITH RECEIPTS</b><p style="margin-top:8px;font-size:14px">Every red MSTR day and every confirmed BTC sale burns treasury $SAYLOR. Every single burn is a public transaction. The chart is a mood ring; the mood is fewer coins.</p></div>
   </div>
+  <div class="grid2" style="margin-top:20px;align-items:center">
+    <div class="greentext">
+      <p>&gt;be the most famous bitcoin bull alive</p>
+      <p>&gt;turn a software company into a leveraged BTC bet</p>
+      <p>&gt;post through every single drawdown, crown yourself king</p>
+      <p>&gt;declare the 4-year cycle dead, christen it the "SaylorCycle"</p>
+      <p>&gt;then quietly sell 3,588 coins to make the dividend</p>
+      <p>&gt;anon accumulates the abandoned $SAYLOR token</p>
+      <p>&gt;instead of dumping, LOCK/VEST 60% in public</p>
+      <p>&gt;points a burn engine at the king's worst days</p>
+      <p>&gt;mfw the cope became a coin with a lock and a receipt</p>
+    </div>
+    <figure class="art" style="margin:0">
+      <img src="assets/art-throne.webp" width="629" height="623" loading="lazy" alt="The Cope King on his throne with a golden goblet">
+      <figcaption>the court is in session.</figcaption>
+    </figure>
+  </div>
 </div></section>
 
-<section id="tokenomics"><div class="wrap">
-  <h2 class="h2">TOKENOMICS</h2>
+<section id="perks"><div class="wrap">
+  <h2 class="h2">PERKS OF THE COURT</h2>
+  <p class="subt">why hold? status and perks — <b>never yield, never a dividend, never a promise.</b> funded by a disclosed <b>10,000,000 $SAYLOR (1% of supply)</b> treasury budget, spent in public txs.</p>
+
+  <div class="ladder">
+    <div class="tier"><span class="t-name">SERF</span><span>join the court, pass verification</span><span class="t-req">any holder</span></div>
+    <div class="tier"><span class="t-name">SQUIRE</span><span>meme channels + court events</span><span class="t-req">verified wallet</span></div>
+    <div class="tier"><span class="t-name">KNIGHT OF THE CANDLE</span><span>early merch access + contest juries</span><span class="t-req">bigger bag</span></div>
+    <div class="tier"><span class="t-name">DUKE OF DEFLATION</span><span>burn-council voice + holder-only drops</span><span class="t-req">serious bag</span></div>
+    <div class="tier top"><span class="t-name">KINGSGUARD</span><span>first looks, named in the court, top-table perks</span><span class="t-req">whale tier</span></div>
+  </div>
+
+  <div class="grid2">
+    <div class="card"><b>HOLDER TIERS</b><p style="margin-top:8px;font-size:14px">verify your wallet in Discord, receive your title. bigger bag, better seat at court: roles, channels, first looks. <b>status, not salary.</b></p></div>
+    <div class="card"><b>BURN MILESTONES</b><p style="margin-top:8px;font-size:14px">every time total-burned crosses a marker, the whole court celebrates — giveaways, custom emotes, one-off drops from the disclosed budget.</p></div>
+    <div class="card"><b>WEEKLY MEME BOUNTIES</b><p style="margin-top:8px;font-size:14px">one prompt, seven days, best shitposts get paid in $SAYLOR from the bounty pot. <b>earn it with your hands, not your bag.</b></p></div>
+    <div class="card"><b>MERCH DROPS</b><p style="margin-top:8px;font-size:14px">holder-only drops and court discounts. the crown store opens to titled wallets first.</p></div>
+  </div>
+
+  <div class="grid2" style="margin-top:20px;align-items:center">
+    <figure class="art" style="margin:0">
+      <img src="assets/art-chad-bear.webp" width="900" height="900" loading="lazy" alt="Buff Cope King shrugging off a panicking bear — $SAYLOR parody art">
+      <figcaption>bears get the shoulder. the court stays comfy.</figcaption>
+    </figure>
+    <div style="text-align:center">
+      <p style="color:#d8cfc0;font-size:14px;max-width:380px;margin:0 auto 18px">titles are wallet-verified in the Discord. sell down, and the court demotes you — the ledger doesn't lie.</p>
+      <a class="cta buy" href="https://discord.gg/JbxnnvuCu" data-link="discord" target="_blank" rel="noopener">CLAIM YOUR TITLE</a>
+      <p style="font-size:11px;color:var(--muted);margin-top:10px">perks are discretionary, non-financial, and can change — see disclaimer.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="tokenomics" class="band"><div class="wrap">
+  <h2 class="h2">TOKENOMICS (THE RECEIPTS)</h2>
   <p class="subt">1,000,000,000 total supply · ~60% locked on-chain · ~12% community float. verifiable on-chain — don't trust the site, trust the explorer links.</p>
   <div class="card">
-    <div class="row"><span>🔒 timelocked supply — public locks</span><b>55%</b></div>
+    <div class="row"><span>timelocked supply — public locks</span><b>55%</b></div>
     <div class="bar"><span class="b-lock" style="width:55%"></span></div>
-    <div class="row"><span>⏳ founder lock — 6-month</span><b>5%</b></div>
+    <div class="row"><span>founder lock — 6-month</span><b>5%</b></div>
     <div class="bar"><span class="b-fnd" style="width:5%"></span></div>
-    <div class="row"><span>🌊 LP — founder-provided (Meteora)</span><b>3%</b></div>
+    <div class="row"><span>LP — founder-provided (Meteora)</span><b>3%</b></div>
     <div class="bar"><span class="b-lp" style="width:3%"></span></div>
-    <div class="row"><span>🏛️ treasury — ops · mktg · merch · burns</span><b>15%</b></div>
+    <div class="row"><span>treasury — ops · mktg · merch · burns · perks</span><b>15%</b></div>
     <div class="bar"><span class="b-tre" style="width:15%"></span></div>
-    <div class="row"><span>🔓 founder liquid — unlocked, disclosed</span><b>10%</b></div>
+    <div class="row"><span>founder liquid — unlocked, disclosed</span><b>10%</b></div>
     <div class="bar"><span class="b-liq" style="width:10%"></span></div>
-    <div class="row"><span>🐂 community float — held by other wallets</span><b>12%</b></div>
+    <div class="row"><span>community float — held by other wallets</span><b>12%</b></div>
     <div class="bar"><span class="b-float" style="width:12%"></span></div>
 
-    <table style="margin-top:20px">
+    <div class="tblwrap"><table style="margin-top:20px">
       <tr><th>check</th><th>status</th><th>proof</th></tr>
-      <tr><td>Mint authority</td><td id="mintauth">revoked ✅</td><td><a href="#" data-link="holders">solscan →</a></td></tr>
-      <tr><td>Freeze authority</td><td id="freezeauth">revoked ✅</td><td><a href="#" data-link="holders">solscan →</a></td></tr>
-      <tr><td>Supply timelock (55%)</td><td>public timelock</td><td><a href="#" data-link="lock">verify lock →</a></td></tr>
-      <tr><td>Founder lock (5%)</td><td>6-month</td><td><a href="#" data-link="vest">verify lock →</a></td></tr>
-      <tr><td>Founder liquid (10%)</td><td>unlocked · disclosed</td><td><a href="#" data-link="holders">solscan →</a></td></tr>
-      <tr><td>Community float (12%)</td><td>held by other wallets</td><td><a href="#" data-link="holders">solscan →</a></td></tr>
-      <tr><td>LP</td><td>Meteora · founder-provided</td><td><a href="#" data-link="lp">verify LP →</a></td></tr>
-      <tr><td>Treasury</td><td>founder-controlled · multisig planned</td><td><a href="#" data-link="multisig">verify wallet →</a></td></tr>
-    </table>
-    <p style="font-family:'Space Mono',monospace;font-size:11px;color:#555;margin-top:12px">Full disclosure: total supply is <b>1,000,000,000</b>. <b>~60% is locked on-chain</b> (55% supply timelocked + 5% founder lock, public dates), plus 3% founder-provided Meteora liquidity. The founder holds only <b>15% treasury + 10% liquid (disclosed)</b>, and <b>12% is genuine community float held by other wallets.</b> Verify every address above before you ape.</p>
-    <p style="font-family:'Space Mono',monospace;font-size:11px;color:#555;margin-top:8px"><b>Liquidity:</b> founder-provided on Meteora (4% swap fee). Swap fees split <b>25% → treasury</b> (feeds buybacks &amp; burns) and <b>75% → founder</b>. Perma-lock optional/pending.</p>
-    <p style="font-family:'Space Mono',monospace;font-size:11px;color:#555;margin-top:8px">🧑‍💻 <b>Code is open.</b> Contract, burn engine, SEC-watcher, and bots are all public — don't trust, audit: <a href="https://github.com/GaySaylor/saylor" target="_blank" rel="noopener">github.com/GaySaylor/saylor</a>.</p>
-    <p style="font-family:'Space Mono',monospace;font-size:11px;color:#555;margin-top:8px">📋 <b>Full proof, one page</b> — every lock, LP, and authority with clickable on-chain links → <a href="transparency.html">Transparency report</a>.</p>
+      <tr><td>Mint authority</td><td id="mintauth">revoked</td><td><a href="https://solscan.io/token/BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump" data-link="token" target="_blank" rel="noopener">solscan →</a></td></tr>
+      <tr><td>Freeze authority</td><td id="freezeauth">revoked</td><td><a href="https://solscan.io/token/BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump" data-link="token" target="_blank" rel="noopener">solscan →</a></td></tr>
+      <tr><td>Supply timelock (55%)</td><td>public timelock ×2</td><td><a href="https://stakepoint.app/locks/cmra0kdp00000l204xsw73ldn" data-link="lock" target="_blank" rel="noopener">lock 1 →</a> · <a href="https://stakepoint.app/locks/cmra3f2ze0000lb04ks2qxxmi" data-link="lock2" target="_blank" rel="noopener">lock 2 →</a></td></tr>
+      <tr><td>Founder lock (5%)</td><td>6-month</td><td><a href="https://stakepoint.app/locks/cmra17kgs0000l404jc7qy3lb" data-link="vest" target="_blank" rel="noopener">verify lock →</a></td></tr>
+      <tr><td>Founder liquid (10%)</td><td>unlocked · disclosed</td><td><a href="https://solscan.io/token/BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump#holders" data-link="holders" target="_blank" rel="noopener">solscan →</a></td></tr>
+      <tr><td>Community float (12%)</td><td>held by other wallets</td><td><a href="https://solscan.io/token/BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump#holders" data-link="holders" target="_blank" rel="noopener">solscan →</a></td></tr>
+      <tr><td>LP</td><td>Meteora · founder-provided</td><td><a href="https://app.meteora.ag/dammv2/BC62nm1MLrgQghUA6uuX2L5uHNxY5aZt5U69E1CErvAs" data-link="lp" target="_blank" rel="noopener">verify LP →</a></td></tr>
+      <tr><td>Treasury</td><td>founder-controlled · multisig planned</td><td><a href="https://solscan.io/account/5LQVwpFdhvfoS85MjduzPTqwtTda5arpXzsKmQxSLS5j" data-link="multisig" target="_blank" rel="noopener">verify wallet →</a></td></tr>
+      <tr><td>Perks budget (1%)</td><td>10M $SAYLOR from treasury</td><td>spent in public txs</td></tr>
+    </table></div>
+    <p style="font-size:11px;color:#555;margin-top:12px">Full disclosure: total supply is <b>1,000,000,000</b>. <b>~60% is locked on-chain</b> (55% supply timelocked + 5% founder lock, public dates), plus 3% founder-provided Meteora liquidity (4% swap fee; fee split 25% treasury / 75% founder — full detail on the <a href="transparency.html">transparency page</a>). The founder holds <b>15% treasury + 10% liquid (disclosed)</b>, and <b>12% is genuine community float held by other wallets.</b> Verify every address above before you ape.</p>
+    <p style="font-size:11px;color:#555;margin-top:8px"><b>Full proof, one page</b> — every lock, LP, and authority with clickable on-chain links → <a href="transparency.html">Transparency report</a>.</p>
+  </div>
+  <div class="midcta">
+    <a class="cta buy" href="https://jup.ag/swap/SOL-BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump" data-link="jupiter" target="_blank" rel="noopener">VERIFIED THE RECEIPTS? BUY $SAYLOR</a>
   </div>
 </div></section>
 
 <section id="burn"><div class="wrap">
-  <h2 class="h2">🔥 THE INVERSE-CRAMER BURN ENGINE</h2>
-  <p class="subt">do the opposite of the pain. supply only moves one direction — down. here's exactly how it works, in depth.</p>
+  <h2 class="h2">THE COPE ENGINE</h2>
+  <p class="subt">supply only moves one direction — down. his pain, our deflation. every burn a public tx.</p>
 
-  <div style="background:var(--red);color:#fff;border:2px solid #000;box-shadow:4px 4px 0 #000;padding:12px 16px;font-family:'Space Mono',monospace;font-size:12.5px;font-weight:700;text-align:center;margin-bottom:22px">
-    ⚠️ PENDING SECURITY AUDIT — the burn contract is code-complete and internally reviewed, but NO real funds route through it until an independent professional audit is published (see roadmap). Until then, burns are executed manually from the founder-controlled treasury. Never send tokens to any burn contract before the audit ships.
-  </div>
+  <div class="statuschip">AUDIT IN PROGRESS — the burn contract routes no real funds until an independent audit ships (see roadmap). until then, burns run manually from the treasury, posted publicly.</div>
 
-  <div class="burnbox">
-    <h3>the thesis</h3>
-    <p class="mono">Saylor turned MSTR into a leveraged bitcoin proxy and narrates every candle. $SAYLOR inverts it: his pain is our deflation. Three independent triggers remove supply forever, and every burn is a public on-chain transaction — nothing happens off-book.</p>
-
-    <h3 style="margin-top:20px">trigger 1 — MSTR closes red 🩸 (automated keeper)</h3>
-    <p class="mono">A keeper bot on our infra reads MSTR's official daily close after each US session, computes the % move vs the prior close, and if it's red, submits a burn sized to the drop (table below). Runs every trading day. The price arrives as a signed attestation the contract verifies — the keeper cannot fake a number, and a green day burns nothing.</p>
-
-    <h3 style="margin-top:18px">trigger 2 — confirmed BTC sale 📉 (watcher → multisig)</h3>
-    <p class="mono">There is no on-chain event for "MicroStrategy sold bitcoin" — it surfaces in an SEC 8-K or official release, not a wallet move. So a watcher bot monitors SEC EDGAR filings + official disclosures, tiered by trust: filings are ground truth, social chatter is early-warning only and can never trigger a burn. On a CONFIRMED filing it drafts a proposal; the treasury signer verifies and fires it the same day. Rumors and tweets never burn. Flat 2,000,000 $SAYLOR per disclosed sale.</p>
-
-    <h3 style="margin-top:18px">trigger 3 — buyback &amp; burn 🧢 (perpetual)</h3>
-    <p class="mono">Merch profits + 25% of the Meteora LP swap fees buy $SAYLOR on the open market and burn it. This pulls from CIRCULATING supply (not the treasury), so it adds deflation independent of MSTR and keeps working even in a flat market. Buy a hat → burn a coin, forever.</p>
-
-    <div class="burnstat">
-      <div class="bx"><div class="v" id="mstr">$--</div><div class="l">MSTR last close</div></div>
-      <div class="bx"><div class="v" id="burned">0</div><div class="l">total $SAYLOR burned</div></div>
-      <div class="bx"><div class="v" id="nextburn">pending launch</div><div class="l">next check</div></div>
+  <div class="grid2" style="align-items:start">
+    <div class="burnbox">
+      <h3>three triggers</h3>
+      <div class="tblwrap"><table style="margin-top:8px;min-width:0">
+        <tr><th>trigger</th><th>burn</th><th>source</th></tr>
+        <tr><td>MSTR red 0–3%</td><td>250,000</td><td>treasury</td></tr>
+        <tr><td>MSTR red 3–7%</td><td>500,000</td><td>treasury</td></tr>
+        <tr><td>MSTR red 7%+</td><td>1,000,000</td><td>treasury</td></tr>
+        <tr><td>Confirmed BTC sale</td><td>2,000,000</td><td>treasury</td></tr>
+        <tr><td>Merch + LP fees</td><td>buyback</td><td>circulating</td></tr>
+        <tr><td>Green day, no sale</td><td>0 — the king eats good. engine sleeps.</td><td>—</td></tr>
+      </table></div>
+      <div class="burnstat">
+        <div class="bx"><div class="v" id="mstr">$--</div><div class="l">MSTR last close</div></div>
+        <div class="bx"><div class="v" id="burned">0</div><div class="l">total $SAYLOR burned</div></div>
+        <div class="bx"><div class="v" id="nextburn">pending launch</div><div class="l">next check</div></div>
+      </div>
+      <details>
+        <summary>how each trigger works (the full mechanics)</summary>
+        <p class="mono" style="margin-top:10px"><b>1 · MSTR closes red (automated keeper).</b> A keeper bot reads MSTR's official daily close, computes the % move, and if it's red, submits a burn sized to the drop. The price arrives as a signed attestation the contract verifies — the keeper cannot fake a number, and a green day burns nothing.</p>
+        <p class="mono"><b>2 · Confirmed BTC sale (watcher → signer).</b> A watcher monitors SEC EDGAR filings + official disclosures. Filings are ground truth; social chatter is early-warning only and can never trigger a burn. On a CONFIRMED filing the treasury signer verifies and fires the same day. Rumors never burn.</p>
+        <p class="mono"><b>3 · Buyback &amp; burn (perpetual).</b> Merch profits + 25% of LP swap fees buy $SAYLOR on the open market and burn it — pulling from circulating supply, working even in a flat market. Buy a hat → burn a coin, forever.</p>
+        <p class="mono"><b>Guardrails.</b> Hard daily cap (~1.5M) enforces a 6+ month treasury runway · locked supply and LP principal are never touched · the signer can pause the engine · trigger 2 always requires a human signature · 2-of-3 multisig upgrade on the roadmap.</p>
+        <p class="mono" style="opacity:.8">Burns reduce the supply count only — they do not create, protect, or promise any value or price outcome.</p>
+      </details>
     </div>
-
-    <table style="margin-top:18px">
-      <tr><th>trigger</th><th>burn amount</th><th>source</th></tr>
-      <tr><td>MSTR red 0–3%</td><td>250,000 $SAYLOR</td><td>treasury</td></tr>
-      <tr><td>MSTR red 3–7%</td><td>500,000 $SAYLOR</td><td>treasury</td></tr>
-      <tr><td>MSTR red 7%+</td><td>1,000,000 $SAYLOR</td><td>treasury</td></tr>
-      <tr><td>Confirmed BTC sale</td><td>2,000,000 $SAYLOR</td><td>treasury</td></tr>
-      <tr><td>Merch + LP fees</td><td>market buyback</td><td>circulating</td></tr>
-      <tr><td>Green day, no sale</td><td>0 — the king eats good, so do we</td><td>—</td></tr>
-    </table>
-
-    <h3 style="margin-top:20px">the guardrails</h3>
-    <p class="mono">• <b>Daily cap:</b> a hard on-chain ceiling (~1.5M/day) limits total burns across all triggers, so a cluster of red days can't drain the treasury — this enforces a 6+ month runway.<br>
-    • <b>Treasury-sourced only:</b> triggers 1 &amp; 2 burn from the 15% treasury bucket. Locked supply and LP principal are never touched.<br>
-    • <b>Human control:</b> the treasury signer can pause the engine, and trigger 2 always requires a human signature. A 2-of-3 multisig upgrade is on the roadmap.<br>
-    • <b>Fully public:</b> every burn is an on-chain tx; the running total updates live above.</p>
-
-    <p class="mono" style="margin-top:14px;opacity:.8">source: /burn-engine (Anchor program + keeper) + /saylor-watch (disclosure watcher). Status: code-complete, internally security-reviewed, <b>pending independent audit</b> before any real funds — see roadmap.</p>
+    <figure class="art" style="margin:0">
+      <img src="assets/art-doomscroll.webp" width="624" height="625" loading="lazy" alt="The Cope King doomscrolling in bed at 3am — $SAYLOR parody art">
+      <figcaption>the king checks the chart at 3am. the engine checks it for you.</figcaption>
+    </figure>
   </div>
 </div></section>
 
-<section id="saylorcycle"><div class="wrap">
-  <h2 class="h2">📈 THE SAYLORCYCLE</h2>
+<section id="saylorcycle" class="band"><div class="wrap">
+  <h2 class="h2">THE SAYLORCYCLE</h2>
   <p class="subt">the thesis $SAYLOR exists to troll: the 4-year bitcoin cycle is dead, "winter isn't coming," and we've entered a decade-long institutional <b>gold rush</b>. coined by <a href="https://x.com/bradmillscan" target="_blank" rel="noopener">Brad Mills</a>.</p>
   <div class="card">
-    <svg viewBox="0 0 900 380" style="width:100%;height:auto;display:block;background:#141414;border:2px solid #000" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 900 380" style="width:100%;height:auto;display:block;background:#141414;border:2px solid #000" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stylized adoption-curve chart labeled Gold Rush, illustrating the SaylorCycle thesis">
       <rect x="60" y="24" width="180" height="292" fill="#1b1b1b"/>
       <rect x="420" y="24" width="180" height="292" fill="#1b1b1b"/>
       <rect x="600" y="24" width="240" height="292" fill="#2a2410"/>
@@ -306,51 +372,75 @@
   </div>
 
   <div class="burnbox" style="margin-top:20px">
-    <h3>⚡ …and then the king sold.</h3>
-    <p class="mono">CONFIRMED, per Strategy's own disclosure: the company sold <b>3,588 BTC</b> (Jun 29 – Jul 5, 2026, avg ~$60k) to fund preferred-stock dividends — cutting holdings to <b>843,775 BTC</b>. The man whose entire brand was "never sell"… sold. That is exactly the burn engine's <b>Trigger 2</b>. He types, he sells, <b>we burn.</b></p>
+    <h3>…and then the king sold.</h3>
+    <p class="mono">CONFIRMED, per Strategy's own disclosure: the company sold <b>3,588 BTC</b> (Jun 29 – Jul 5, 2026, avg ~$60k) to fund preferred-stock dividends — cutting holdings to <b>843,775 BTC</b>. The man whose entire brand was "never sell"… sold. That is exactly the Cope Engine's <b>Trigger 2</b>. He types, he sells, <b>we burn.</b></p>
     <p class="mono" style="opacity:.7;margin-top:8px">Public disclosure — sources: <a href="https://www.kucoin.com/news/flash/microstrategy-sells-3-588-btc-for-216m-to-fund-dividends-maintains-2-55b-cash-reserve" target="_blank" rel="noopener">sale summary</a> · <a href="https://www.coindesk.com/markets/2026/06/29/strategy-opens-the-door-to-selling-bitcoin-under-new-capital-plan-here-s-what-it-means" target="_blank" rel="noopener">CoinDesk</a>. Verify before you trust.</p>
   </div>
 
-  <p class="subt" style="margin-top:16px;font-size:12px;color:#888">"SaylorCycle" is a thesis by <a href="https://x.com/bradmillscan" target="_blank" rel="noopener">Brad Mills / @bradmillscan</a>. The chart above is our own original illustration, not his. $SAYLOR is an unaffiliated parody.</p>
+  <p class="subt" style="margin-top:16px;font-size:12px;color:#a89f92">"SaylorCycle" is a thesis by <a href="https://x.com/bradmillscan" target="_blank" rel="noopener">Brad Mills / @bradmillscan</a>. The chart above is our own original illustration, not his. $SAYLOR is an unaffiliated parody.</p>
 </div></section>
 
-<section id="roadmap"><div class="wrap">
-  <h2 class="h2">🗺️ THE ROADMAP</h2>
+<section id="chart"><div class="wrap">
+  <h2 class="h2">LIVE CHART</h2>
+  <p class="subt">real-time, straight from dexscreener. don't trust the vibes, trust the candles.</p>
+  <div class="chartbox"><iframe title="Live $SAYLOR price chart on DexScreener" loading="lazy" src="https://dexscreener.com/solana/5YoAQPw38JfHSLJ8cmd2zJ7KSjAJbzHtPv1Kx9fJEkZv?embed=1&loadChartSettings=0&trades=0&tabs=0&info=0&chartDefaultOnMobile=1&chartLeftToolbar=0&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"></iframe></div>
+</div></section>
+
+<section id="roadmap" class="band"><div class="wrap">
+  <h2 class="h2">THE ROADMAP</h2>
   <p class="subt">no fake partnerships, no "Q4 metaverse." just the actual sequence.</p>
   <div class="grid2">
     <div class="card"><b>PHASE 0 — LOCK &amp; LAUNCH</b><p style="margin-top:8px;font-size:14px">supply timelock + founder vest (public tx) · Meteora LP · founder-controlled treasury live · authorities revoked · Dexscreener CTO claim · CA reveal. <b>Every lock goes on-chain BEFORE any "locked" claim is made public.</b></p></div>
-    <div class="card"><b>PHASE 1 — COMMUNITY</b><p style="margin-top:8px;font-size:14px">Telegram live + 24/7 anti-scam bot · daily X shitpost cadence · first community raids · merch store (Printful/Shopify) online · manual multisig burns begin.</p></div>
-    <div class="card"><b>PHASE 2 — AUDIT &amp; BURN ENGINE 🔒</b><p style="margin-top:8px;font-size:14px">Independent professional audit of the burn contract → fix + re-review → devnet soak with negative tests → THEN deploy to mainnet and route treasury through it. <b>No real funds in the contract until this ships.</b> Treasury upgrades to a 2-of-3 multisig; burns stay manual until the audit clears.</p></div>
+    <div class="card"><b>PHASE 1 — COMMUNITY</b><p style="margin-top:8px;font-size:14px">Telegram + Discord live with verification gates · anti-scam bots 24/7 · holder tiers + meme bounties begin · daily X cadence · merch store online · manual treasury burns begin.</p></div>
+    <div class="card"><b>PHASE 2 — AUDIT &amp; COPE ENGINE</b><p style="margin-top:8px;font-size:14px">Independent professional audit of the burn contract → fix + re-review → devnet soak with negative tests → THEN deploy to mainnet and route treasury through it. <b>No real funds in the contract until this ships.</b> Treasury upgrades to a 2-of-3 multisig; burns stay manual until the audit clears.</p></div>
     <div class="card"><b>PHASE 3 — DEFLATION ON AUTOPILOT</b><p style="margin-top:8px;font-size:14px">Keeper + watcher fully automated · live burn dashboard · buyback-burn from merch + LP fees compounding · community input on burn-tier tweaks. cope becomes deflation, forever.</p></div>
   </div>
+  <figure class="art" style="max-width:520px;margin:26px auto 0">
+    <img src="assets/art-sunset.webp" width="626" height="626" loading="lazy" alt="The Cope King watching the sunset over the mountains — $SAYLOR parody art">
+    <figcaption>the king reflects. the engine doesn't.</figcaption>
+  </figure>
 </div></section>
 
 <section id="buy"><div class="wrap">
   <h2 class="h2">HOW 2 COPE (BUY)</h2>
   <div class="grid2">
     <div class="card"><b>1. GET A WALLET</b><p style="font-size:14px;margin-top:8px">Phantom or Solflare. Fund with SOL.</p></div>
-    <div class="card"><b>2. COPY THE CA</b><p style="font-size:14px;margin-top:8px">Only ever trust the address on this page. <span style="font-family:'Space Mono',monospace;font-size:11px">BGwYn…pump</span></p></div>
-    <div class="card"><b>3. SWAP ON JUPITER</b><p style="font-size:14px;margin-top:8px">Paste CA, 3-5% slippage, swap SOL → $SAYLOR.</p></div>
-    <div class="card"><b>4. KNEEL 👑</b><p style="font-size:14px;margin-top:8px">Hold the line. Watch the burns roll in on the king's red days.</p></div>
+    <div class="card"><b>2. COPY THE CA</b><p style="font-size:14px;margin-top:8px">Only ever trust the address on this page. Anyone DMing you a different one is scamming you.</p></div>
+    <div class="card"><b>3. SWAP ON JUPITER</b><p style="font-size:14px;margin-top:8px">The buy button below pre-fills the pair. Click, swap SOL → $SAYLOR, done.</p></div>
+    <div class="card"><b>4. TAKE YOUR SEAT AT COURT</b><p style="font-size:14px;margin-top:8px">Verify your wallet in Discord, claim your title. The burns are the show, not a promise.</p></div>
+  </div>
+  <div class="ca" style="margin:26px auto 0">
+    <code>BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump</code>
+    <button onclick="copyCA(this)" aria-label="Copy contract address">COPY</button>
+  </div>
+  <div class="btns" style="justify-content:center">
+    <a class="cta buy" href="https://jup.ag/swap/SOL-BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump" data-link="jupiter" target="_blank" rel="noopener">BUY $SAYLOR</a>
+    <a class="cta" href="https://discord.gg/JbxnnvuCu" data-link="discord" target="_blank" rel="noopener">JOIN THE COURT</a>
+    <a class="cta" href="https://t.me/gaysaylorsol" data-link="telegram" target="_blank" rel="noopener">TELEGRAM</a>
   </div>
 </div></section>
 
 <footer><div class="wrap">
   <div class="foot-links">
-    <a href="#" data-link="x">X / Twitter</a>
-    <a href="#" data-link="telegram">Telegram</a>
-    <a href="#" data-link="jupiter">Jupiter</a>
-    <a href="#" data-link="dexscreener">DEX Screener</a>
-    <a href="https://github.com/GaySaylor/saylor" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://x.com/gaysaylorsol" data-link="x" target="_blank" rel="noopener">X / Twitter</a>
+    <a href="https://t.me/gaysaylorsol" data-link="telegram" target="_blank" rel="noopener">Telegram</a>
+    <a href="https://discord.gg/JbxnnvuCu" data-link="discord" target="_blank" rel="noopener">Discord</a>
+    <a href="https://jup.ag/swap/SOL-BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump" data-link="jupiter" target="_blank" rel="noopener">Jupiter</a>
+    <a href="https://dexscreener.com/solana/BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump" data-link="dexscreener" target="_blank" rel="noopener">DEX Screener</a>
+    <a href="https://github.com/GaySaylor/Saylor" target="_blank" rel="noopener">GitHub</a>
     <a href="transparency.html">Transparency</a>
-    <a href="https://gaysaylor.com">gaysaylor.com</a>
     <a href="mailto:GM@gaysaylor.com">GM@gaysaylor.com</a>
   </div>
   <div class="disc">
-    <b>PARODY / DISCLAIMER — read this, it matters.</b> $SAYLOR is a community-run PARODY memecoin made for entertainment and satire. It is NOT affiliated with, endorsed by, or connected to Michael Saylor, Strategy Inc. / MicroStrategy, or MSTR in any way. All names, likenesses, and references are used for parody and commentary. The "cope king" character is a stylized cartoon meme illustration, not a real photograph or portrait of any person. $SAYLOR is NOT an investment, security, or financial product, carries no expectation of profit, and confers no ownership or claim on any entity or company. Full transparency: total supply is 1,000,000,000. ~60% is locked on-chain (55% supply timelocked + 5% founder lock), plus 3% founder-provided Meteora liquidity; the founder holds only 15% treasury + 10% liquid (disclosed), and 12% is genuine community float held by other wallets — all disclosed openly, verify on-chain via the links above. Memecoins are extremely high risk — you can lose everything. Nothing on this site is financial advice. Do your own research. By interacting with this token or site you accept full responsibility for your own decisions.
+    <b>PARODY / DISCLAIMER — read this, it matters.</b> $SAYLOR is a community-run PARODY memecoin made for entertainment and satire. It is NOT affiliated with, endorsed by, or connected to Michael Saylor, Strategy Inc. / MicroStrategy, or MSTR in any way. All names, likenesses, and references are used for parody and commentary. The "cope king" character is a stylized cartoon meme illustration, not a real photograph or portrait of any person. Third-party meme characters depicted in artwork (e.g. Doge, Pepe) are cultural references; no affiliation with any project or rights holder is implied. $SAYLOR is NOT an investment, security, or financial product, carries no expectation of profit, and confers no ownership or claim on any entity or company. Token burns reduce the supply count only; they do not create, protect, or promise any value or price outcome. Community perks (tiers, bounties, merch, milestone rewards) are discretionary, non-financial benefits funded from the disclosed treasury budget; they are not yield, dividends, or compensation, and may change or end at any time. Full transparency: total supply is 1,000,000,000. ~60% is locked on-chain (55% supply timelocked + 5% founder lock), plus 3% founder-provided Meteora liquidity; the founder holds 15% treasury + 10% liquid (disclosed), and 12% is genuine community float held by other wallets — all disclosed openly, verify on-chain via the links above. Memecoins are extremely high risk — you can lose everything. Nothing on this site is financial advice. Do your own research. By interacting with this token or site you accept full responsibility for your own decisions.
   </div>
   <div style="font-family:'Anton',sans-serif;letter-spacing:2px;font-size:18px">👑 $SAYLOR · HE TYPES, WE BURN · LONG LIVE THE COPE KING 👑</div>
 </div></footer>
+
+<div class="buybar">
+  <button onclick="copyCA(this)" aria-label="Copy contract address">COPY CA</button>
+  <a class="cta buy" href="https://jup.ag/swap/SOL-BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump" target="_blank" rel="noopener">BUY $SAYLOR</a>
+</div>
 
 <script>
   const CFG = {
@@ -360,36 +450,50 @@
       jupiter:     "https://jup.ag/swap/SOL-BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump",
       x:           "https://x.com/gaysaylorsol",
       telegram:    "https://t.me/gaysaylorsol",
+      discord:     "https://discord.gg/JbxnnvuCu",
       lock:        "https://stakepoint.app/locks/cmra0kdp00000l204xsw73ldn",
+      lock2:       "https://stakepoint.app/locks/cmra3f2ze0000lb04ks2qxxmi",
       vest:        "https://stakepoint.app/locks/cmra17kgs0000l404jc7qy3lb",
       lp:          "https://app.meteora.ag/dammv2/BC62nm1MLrgQghUA6uuX2L5uHNxY5aZt5U69E1CErvAs",
       multisig:    "https://solscan.io/account/5LQVwpFdhvfoS85MjduzPTqwtTda5arpXzsKmQxSLS5j",
+      token:       "https://solscan.io/token/BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump",
       holders:     "https://solscan.io/token/BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump#holders"
     },
     burn: { total: "0", nextTrigger: "pending launch" }
   };
+  // real hrefs are baked into the HTML; this only keeps them in sync with CFG
   document.querySelectorAll('[data-link]').forEach(a=>{
-    const k=a.getAttribute('data-link'); if(CFG.links[k]) a.href=CFG.links[k];
-    if(CFG.links[k] && CFG.links[k].startsWith('http')) a.target="_blank";
+    const k=a.getAttribute('data-link');
+    if(CFG.links[k]){ a.href=CFG.links[k];
+      if(CFG.links[k].startsWith('http')){ a.target="_blank"; a.rel="noopener"; } }
   });
-  function copyCA(){ navigator.clipboard.writeText(CFG.token);
-    const b=event.target; const t=b.textContent; b.textContent="COPIED"; setTimeout(()=>b.textContent=t,1400); }
+  function copyCA(btn){
+    navigator.clipboard.writeText(CFG.token).then(()=>{
+      const t=btn.textContent; btn.textContent="COPIED"; setTimeout(()=>btn.textContent=t,1400);
+    }).catch(()=>{ btn.textContent="COPY FAILED"; setTimeout(()=>btn.textContent="COPY",1400); });
+  }
 
   const fmt = n => n>=1e9?'$'+(n/1e9).toFixed(2)+'B':n>=1e6?'$'+(n/1e6).toFixed(2)+'M':n>=1e3?'$'+(n/1e3).toFixed(1)+'K':'$'+Number(n).toFixed(0);
+  let lastGood = null;
   async function loadStats(){
     try{
       const r = await fetch('https://api.dexscreener.com/latest/dex/tokens/'+CFG.token);
       const j = await r.json();
       const p = (j.pairs||[]).sort((a,b)=>(b.liquidity?.usd||0)-(a.liquidity?.usd||0))[0];
-      if(!p) throw 0;
+      if(!p || !p.priceUsd) throw 0;
       document.getElementById('price').textContent = '$'+Number(p.priceUsd).toPrecision(3);
       document.getElementById('mc').textContent  = fmt(p.marketCap||p.fdv||0);
       document.getElementById('liq').textContent = fmt(p.liquidity?.usd||0);
-      const ch = p.priceChange?.h24 ?? 0;
+      const ch = Number(p.priceChange?.h24 ?? 0);
       const el = document.getElementById('chg');
       el.textContent = (ch>=0?'+':'')+ch+'%'; el.className='v '+(ch>=0?'up':'down');
-      document.getElementById('upd').textContent = 'updated just now';
-    }catch(e){ document.getElementById('upd').textContent='chart loads once the pair is indexed'; }
+      lastGood = new Date();
+      document.getElementById('upd').textContent = 'live · updated '+lastGood.toLocaleTimeString();
+    }catch(e){
+      document.getElementById('upd').textContent = lastGood
+        ? 'last update '+lastGood.toLocaleTimeString()+' · refresh paused'
+        : 'live data warming up…';
+    }
   }
   document.getElementById('burned').textContent = CFG.burn.total;
   document.getElementById('nextburn').textContent = CFG.burn.nextTrigger;
