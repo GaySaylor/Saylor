@@ -5,8 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>$SAYLOR — Transparency &amp; On-Chain Proof</title>
 <meta name="description" content="$SAYLOR transparency report — every lock, LP, and authority, verifiable on-chain. ~60% of supply timelocked. Parody memecoin, not affiliated with Michael Saylor or MicroStrategy." />
-<link rel="icon" type="image/svg+xml" href="assets/cope-king.svg">
+<link rel="canonical" href="https://gaysaylor.com/transparency.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gaysaylor.com/transparency.html">
+<meta property="og:title" content="$SAYLOR — Transparency &amp; On-Chain Proof">
+<meta property="og:description" content="Every lock, LP, and authority — verifiable on-chain. ~60% of supply timelocked. Don't trust, click through.">
+<meta property="og:image" content="https://gaysaylor.com/assets/og-card.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gaysaylor.com/assets/og-card.jpg">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Space+Mono:wght@400;700&family=Anton&display=swap" rel="stylesheet">
 <style>
   :root{--bg:#343434;--paper:#f4f2ea;--ink:#161616;--gold:#f2c53d;--orange:#ff7a1a;--green:#37b24d;--muted:#9a9a9a;--red:#c0202f;}
@@ -26,6 +36,7 @@
   .ca{display:flex;background:var(--paper);border:2px solid #000;box-shadow:4px 4px 0 #000;margin:18px 0}
   .ca code{flex:1;padding:12px;font-family:'Space Mono',monospace;font-size:12px;color:#111;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   h2{font-family:'Anton',sans-serif;letter-spacing:1px;font-size:24px;margin:34px 0 12px;text-shadow:2px 2px 0 #000}
+  .tblwrap{overflow-x:auto}
   table{width:100%;border-collapse:collapse;font-family:'Space Mono',monospace;font-size:13px;color:#111}
   th,td{border:2px solid #000;padding:9px 11px;text-align:left;background:var(--paper);vertical-align:top}
   th{background:var(--gold)}
@@ -39,7 +50,7 @@
 <body>
 <div class="wrap">
   <div class="top">
-    <img src="assets/cope-king.svg" alt="$SAYLOR">
+    <img src="assets/apple-touch-icon.png" width="52" height="52" alt="$SAYLOR — the Cope King">
     <div>
       <h1>$SAYLOR — TRANSPARENCY</h1>
       <div class="sub">Every claim, verifiable on-chain. Don't trust — click through.</div>
@@ -53,11 +64,11 @@
 
   <div class="ca">
     <code id="ca">BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump</code>
-    <button style="background:var(--orange);color:#fff;border:0;border-left:2px solid #000;font-weight:700;padding:0 16px;cursor:pointer;font-family:'Space Mono',monospace" onclick="navigator.clipboard.writeText('BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump');this.textContent='COPIED'">COPY</button>
+    <button style="background:var(--orange);color:#fff;border:0;border-left:2px solid #000;font-weight:700;padding:0 16px;cursor:pointer;font-family:'Space Mono',monospace" aria-label="Copy contract address" onclick="const b=this;navigator.clipboard.writeText('BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump').then(()=>{b.textContent='COPIED';setTimeout(()=>b.textContent='COPY',1400)}).catch(()=>{b.textContent='FAILED';setTimeout(()=>b.textContent='COPY',1400)})">COPY</button>
   </div>
 
   <h2>🔒 Locks &amp; Authorities</h2>
-  <table>
+  <div class="tblwrap"><table>
     <tr><th>What</th><th>Amount</th><th>Terms</th><th>Verify</th></tr>
     <tr>
       <td>Supply timelock #1</td>
@@ -89,21 +100,21 @@
       <td>no wallet can be frozen</td>
       <td><a href="https://solscan.io/token/BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump" target="_blank" rel="noopener">token page</a></td>
     </tr>
-  </table>
+  </table></div>
   <p class="note">Locks are held in on-chain Program Derived Addresses (PDAs) — no private key can withdraw them before the unlock date. Amounts are net of StakePoint's 2% lock fee.</p>
 
   <h2>🌊 Liquidity</h2>
-  <table>
+  <div class="tblwrap"><table>
     <tr><th>What</th><th>Details</th><th>Verify</th></tr>
     <tr>
       <td>Meteora DAMM v2 pool</td>
       <td>$SAYLOR / SOL · founder-seeded · 4% swap fee<br><span class="note">Fees split 25% treasury / 75% founder. Perma-lock optional/pending.</span></td>
       <td><a href="https://app.meteora.ag/dammv2/BC62nm1MLrgQghUA6uuX2L5uHNxY5aZt5U69E1CErvAs" target="_blank" rel="noopener">pool</a> · <a href="https://solscan.io/account/BC62nm1MLrgQghUA6uuX2L5uHNxY5aZt5U69E1CErvAs" target="_blank" rel="noopener">solscan</a></td>
     </tr>
-  </table>
+  </table></div>
 
   <h2>📊 Distribution</h2>
-  <table>
+  <div class="tblwrap"><table>
     <tr><th>Bucket</th><th>%</th><th>Verify</th></tr>
     <tr><td>🔒 Timelocked supply</td><td class="amt">~55%</td><td>see locks above</td></tr>
     <tr><td>⏳ Founder lock (6-mo)</td><td class="amt">~5%</td><td>see locks above</td></tr>
@@ -111,15 +122,16 @@
     <tr><td>🏛️ Treasury (founder-controlled)</td><td class="amt">~15%</td><td><a href="https://solscan.io/account/5LQVwpFdhvfoS85MjduzPTqwtTda5arpXzsKmQxSLS5j" target="_blank" rel="noopener">wallet</a></td></tr>
     <tr><td>🔓 Founder liquid (disclosed)</td><td class="amt">~10%</td><td><a href="https://solscan.io/account/5LQVwpFdhvfoS85MjduzPTqwtTda5arpXzsKmQxSLS5j" target="_blank" rel="noopener">wallet</a></td></tr>
     <tr><td>🐂 Community float (other wallets)</td><td class="amt">~12%</td><td><a href="https://solscan.io/token/BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump#holders" target="_blank" rel="noopener">holders</a></td></tr>
-  </table>
+  </table></div>
 
   <h2>🔗 More</h2>
   <div>
     <a class="pill" href="https://gaysaylor.com" target="_blank" rel="noopener">🌐 gaysaylor.com</a>
     <a class="pill" href="https://x.com/gaysaylorsol" target="_blank" rel="noopener">🐦 @gaysaylorsol</a>
     <a class="pill" href="https://t.me/gaysaylorsol" target="_blank" rel="noopener">✈️ Telegram</a>
-    <a class="pill" href="https://github.com/GaySaylor/saylor" target="_blank" rel="noopener">🧑‍💻 GitHub (open code)</a>
-    <a class="pill" href="https://dexscreener.com/solana/BGwYnDVe18aj9cozWcKNhiTUwayELULg5rHLGPPdpump" target="_blank" rel="noopener">📈 DEX Screener</a>
+    <a class="pill" href="https://discord.gg/DuM5VBK369" target="_blank" rel="noopener">🎮 Discord</a>
+    <a class="pill" href="https://github.com/GaySaylor/Saylor" target="_blank" rel="noopener">🧑‍💻 GitHub (site source)</a>
+    <a class="pill" href="https://dexscreener.com/solana/5YoAQPw38JfHSLJ8cmd2zJ7KSjAJbzHtPv1Kx9fJEkZv" target="_blank" rel="noopener">📈 DEX Screener</a>
   </div>
 
   <div class="disc">

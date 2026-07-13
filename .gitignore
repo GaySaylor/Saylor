@@ -47,3 +47,6 @@ __pycache__/
 node_modules/
 .DS_Store
 *.log
+
+# keep the token logo (Jupiter submission points at this raw path)
+!/assets/token-logo.png
